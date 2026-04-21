@@ -98,28 +98,29 @@ Rather than putting log statements inside every single resource method I used a 
 
 The ContainerResponseFilter also runs after everything else has finished including any exception mappers, which means it always captures the actual final HTTP status code that gets sent to the client. If I had logged inside the resource method itself I would not always know what the final status code was going to be, especially if an exception gets thrown and caught by one of the mappers. Using a filter also keeps the logging logic completely separate from the business logic which makes the code cleaner overall.
 
-PROJECT STRUCTURE
+ProjectStructure 
 
-application DataStore.java 
-Main.java 
-SmartCampusApplication.java
-
-model Room.java 
-Sensor.java 
-SensorReading.java
-
-resource DiscoveryResource.java 
-RoomResource.java 
-SensorResource.java 
-SensorReadingResource.java
-
-exception ErrorResponse.java 
-GlobalExceptionMapper.java L
-inkedResourceNotFoundException.java 
-LinkedResourceNotFoundMapper.java 
-RoomNotEmptyException.java 
-RoomNotEmptyMapper.java 
-SensorUnavailableException.java 
-SensorUnavailableMapper.java
-
-filter ApiLoggingFilter.java
+├── application/
+│   ├── DataStore.java
+│   ├── Main.java
+│   └── SmartCampusApplication.java
+├── model/
+│   ├── Room.java
+│   ├── Sensor.java
+│   └── SensorReading.java
+├── resource/
+│   ├── DiscoveryResource.java
+│   ├── RoomResource.java
+│   ├── SensorResource.java
+│   └── SensorReadingResource.java
+├── exception/
+│   ├── ErrorResponse.java
+│   ├── GlobalExceptionMapper.java
+│   ├── LinkedResourceNotFoundException.java
+│   ├── LinkedResourceNotFoundMapper.java
+│   ├── RoomNotEmptyException.java
+│   ├── RoomNotEmptyMapper.java
+│   ├── SensorUnavailableException.java
+│   └── SensorUnavailableMapper.java
+└── filter/
+    └── ApiLoggingFilter.java
