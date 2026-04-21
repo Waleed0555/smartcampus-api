@@ -100,12 +100,26 @@ The ContainerResponseFilter also runs after everything else has finished includi
 
 PROJECT STRUCTURE
 
-application DataStore.java Main.java SmartCampusApplication.java
+application DataStore.java 
+Main.java 
+SmartCampusApplication.java
 
-model Room.java Sensor.java SensorReading.java
+model Room.java 
+Sensor.java 
+SensorReading.java
 
-resource DiscoveryResource.java RoomResource.java SensorResource.java SensorReadingResource.java
+resource DiscoveryResource.java 
+RoomResource.java 
+SensorResource.java 
+SensorReadingResource.java
 
-exception ErrorResponse.java GlobalExceptionMapper.java LinkedResourceNotFoundException.java LinkedResourceNotFoundMapper.java RoomNotEmptyException.java RoomNotEmptyMapper.java SensorUnavailableException.java SensorUnavailableMapper.java
+exception ErrorResponse.java 
+GlobalExceptionMapper.java L
+inkedResourceNotFoundException.java 
+LinkedResourceNotFoundMapper.java 
+RoomNotEmptyException.java 
+RoomNotEmptyMapper.java 
+SensorUnavailableException.java 
+SensorUnavailableMapper.java
 
 filter ApiLoggingFilter.java
