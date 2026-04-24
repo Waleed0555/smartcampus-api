@@ -1,5 +1,5 @@
 Smart Campus API
-5COSC022W Client-Server Architectures
+5COSC022W Client Server Architectures
 University of Westminster
 Student Number: w2113683
 Student Name: Waleed Dustgir
@@ -22,11 +22,11 @@ ENDPOINTS
 
 GET    /api/v1                              API info and resource links
 GET    /api/v1/rooms                        Get all rooms
-POST   /api/v1/rooms                        Create a new room
-GET    /api/v1/rooms/roomId                 Get one room by ID
-DELETE /api/v1/rooms/roomId                 Delete a room (blocked if sensors exist)
-GET    /api/v1/sensors                      Get all sensors (filter with ?type=)
-POST   /api/v1/sensors                      Register a new sensor
+POST   /api/v1/rooms                        Creating  a new room
+GET    /api/v1/rooms/roomId                 Getting  one room by ID
+DELETE /api/v1/rooms/roomId                 Deleting a room and it will be blocked if sensors exist
+GET    /api/v1/sensors                      Get all sensors,filtering with ?type=
+POST   /api/v1/sensors                      Registering a new sensor
 GET    /api/v1/sensors/sensorId             Get one sensor by ID
 DELETE /api/v1/sensors/sensorId             Remove a sensor
 GET    /api/v1/sensors/sensorId/readings    Get reading history for a sensor
