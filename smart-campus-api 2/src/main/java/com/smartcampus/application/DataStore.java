@@ -13,9 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-// this class holds all the data in memory since we dont have a database
-// i made it a singleton so everything shares the same data
-public class DataStore {
+
 
     private static DataStore instance;
 
@@ -49,7 +47,6 @@ public class DataStore {
             return sensorReadings.get(sensorId);
     }        
 
-    // just adding some starting data so the api isnt empty when testing
     private void loadSampleData() {
 
         Room r1 = new Room("CG-104", "Computer Lab CG104", 35);
@@ -68,7 +65,7 @@ public class DataStore {
         r1.getSensorIds().add("CO2-001");
         r2.getSensorIds().add("OCC-001");
 
-        // add a few readings to TEMP-001 so history isnt empty
+        
         List<SensorReading> readings = getReadingsForSensor("TEMP-001");
         readings.add(new SensorReading(UUID.randomUUID().toString(), System.currentTimeMillis() - 120000, 21.4));
         readings.add(new SensorReading(UUID.randomUUID().toString(), System.currentTimeMillis() - 60000, 21.8));
